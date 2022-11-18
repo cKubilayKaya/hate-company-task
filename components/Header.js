@@ -4,6 +4,7 @@ import { AiFillInstagram } from "react-icons/ai";
 import { CgProfile } from "react-icons/cg";
 
 export default function Header() {
+  console.log("test");
   return (
     <header className="header">
       <Link href="/" className="logo">
