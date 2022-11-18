@@ -100,7 +100,7 @@ export default function Home() {
         commentName: addCommentVal,
         commentUser: generateUsername(),
         voteUP: 0,
-        commentDate: 1668711119421,
+        commentDate: Date.now(),
         avatar: getRandomAvatar(),
         voteDOWN: 0,
         voteType: "",
@@ -236,10 +236,6 @@ export default function Home() {
               <button className="view-all-comments">View all 16 comments</button>
               <p className="post-date">9 days ago</p>
             </div>
-            {/* <div className="homepage-post-send">
-              <textarea cols="30" rows="1" placeholder="Add a comment"></textarea>
-              <button>Post</button>
-            </div> */}
             <button onClick={openModal} className="open-modal-button">
               Add Comment
             </button>
@@ -263,8 +259,8 @@ export default function Home() {
                             <div className="comment-user">
                               <Image src={`data:image/svg+xml;base64,${btoa(comment.avatar)}`} alt="" width={24} height={24} />
                               <span className="username">{comment?.commentUser}</span>
-                              {/* <span className="time">{DateTime.fromMillis(comment?.commentDate).toRelative()}</span> */}
-                              <span className="time">{comment?.commentDate}</span>
+                              <span className="time">{DateTime.fromMillis(comment?.commentDate).toRelative()}</span>
+                              {/* <span className="time">{comment?.commentDate}</span> */}
                               <button className="answer" onClick={() => showCommentSend(comment)}>
                                 Yanıtla
                               </button>
@@ -302,8 +298,8 @@ export default function Home() {
                               <div className="comment-user">
                                 <Image src={`data:image/svg+xml;base64,${btoa(comment.avatar)}`} alt="" width={24} height={24} />
                                 <span className="username">{altComment?.commentUser}</span>
-                                {/* {altComment && <span className="time">{DateTime.fromMillis(altComment?.commentDate).toRelative()}</span>} */}
-                                {altComment && <span className="time">{altComment?.commentDate}</span>}
+                                {altComment && <span className="time">{DateTime.fromMillis(altComment?.commentDate).toRelative()}</span>}
+                                {/* {altComment && <span className="time">{altComment?.commentDate}</span>} */}
                               </div>
                             </div>
                             <div className="comment-upvotes">

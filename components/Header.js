@@ -1,7 +1,6 @@
 import Link from "next/link";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { AiFillInstagram } from "react-icons/ai";
-import { CgProfile } from "react-icons/cg";
 
 export default function Header() {
   console.log("test");
