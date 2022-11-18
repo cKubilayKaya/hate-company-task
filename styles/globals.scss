@@ -1,0 +1,460 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  box-sizing: border-box;
+  outline: none;
+}
+
+html,
+body {
+  color: white;
+  background: black;
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+input {
+  padding: 10px;
+  border-radius: 4px;
+  border: none;
+  outline: none;
+}
+
+.header {
+  background-color: rgb(29, 29, 29);
+  border-bottom: 1px solid rgb(66, 66, 66);
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 24px;
+  padding-right: 24px;
+  position: sticky;
+  top: 0px;
+  left: 0px;
+  z-index: 9999;
+  .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .header-auth-buttons {
+    a {
+      button {
+        background-color: #6b6b6b;
+        padding: 8px;
+        border-radius: 8px;
+        outline: none;
+        border: none;
+        color: #fff;
+        cursor: pointer;
+      }
+      &:not(:last-child) {
+        margin-right: 8px;
+      }
+    }
+  }
+  .header-profile-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .profile-button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 16px;
+    }
+    .logout-button {
+      background-color: #6b6b6b;
+      padding: 8px;
+      border-radius: 8px;
+      outline: none;
+      border: none;
+      color: #fff;
+      cursor: pointer;
+    }
+  }
+}
+
+.content {
+  min-height: calc(100vh - 120px);
+  height: 100vh;
+  padding: 32px;
+  .login-container {
+    height: 100%;
+    clear: both;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    form {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      max-width: 320px;
+      width: 100%;
+      input,
+      button {
+        width: 100%;
+      }
+      input {
+        margin-bottom: 8px;
+      }
+      button {
+        height: 35px;
+        border-radius: 4px;
+        cursor: pointer;
+        background-color: #fff;
+        color: #000;
+        border: none;
+      }
+    }
+  }
+}
+
+.homepage-content {
+  padding: 0px !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 600px;
+  height: 100% !important;
+  margin: 32px auto;
+  .homepage-posts {
+    width: 100%;
+    .homepage-post {
+      border: 1px solid rgb(65, 65, 65);
+      border-radius: 8px;
+      margin-bottom: 12px;
+      .homepage-post-header {
+        background-color: rgb(32, 32, 32);
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 16px;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+      }
+      .homepage-post-image {
+        img {
+          position: relative !important;
+        }
+      }
+      .homepage-post-action-icons {
+        padding: 12px 16px;
+        .like-button {
+          background-color: transparent;
+          border: none;
+          cursor: pointer;
+          padding: 0px;
+        }
+        p {
+          font-size: 14px;
+          margin-bottom: 0px;
+        }
+      }
+      .homepage-post-user {
+        padding: 0px 16px;
+        .user-text {
+          font-size: 14px;
+          margin-top: 0px;
+          margin-bottom: 4px;
+        }
+        .view-all-comments {
+          background-color: transparent;
+          border: none;
+          color: rgb(206, 206, 206);
+          cursor: pointer;
+          padding: 0px;
+          margin-bottom: 12px;
+          font-size: 13px;
+          &:hover {
+            color: #fff;
+          }
+        }
+        .post-date {
+          margin-top: 0px;
+          color: rgb(206, 206, 206);
+          font-size: 12px;
+          margin-bottom: 0px;
+        }
+      }
+      .open-modal-button {
+        margin: 8px 4px;
+        background-color: transparent;
+        border: none;
+        color: #fff;
+        padding: 12px;
+        cursor: pointer;
+      }
+      .homepage-post-send {
+        display: flex;
+        align-items: center;
+        padding: 12px 16px;
+        border-top: 1px solid rgb(48, 48, 48);
+        textarea {
+          width: 100%;
+          padding: 8px;
+          border: none;
+          color: #fff;
+          resize: none;
+          outline: none;
+          background-color: transparent;
+          font-family: "Poppins", sans-serif;
+        }
+        button {
+          background-color: transparent;
+          border: none;
+          outline: none;
+          color: #fff;
+          margin-left: 16px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+.profile {
+  padding: 0px !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 600px;
+  height: 100% !important;
+  margin: 32px auto;
+  .profile-container {
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    .profile-container-avatar {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: rgb(36, 36, 36);
+      border-radius: 100px;
+      width: fit-content;
+      margin: 0px auto;
+      padding: 12px;
+      border: 1px solid rgb(54, 54, 54);
+    }
+    .profile-name {
+      width: 100%;
+      padding: 12px;
+      p {
+        margin: 0px;
+      }
+      .fullName {
+        font-size: 20px;
+      }
+      .username {
+        font-weight: 600;
+        font-size: 13px;
+      }
+    }
+    .edit-profile {
+      background-color: transparent;
+      border: none;
+      background-color: #3a3a3a;
+      padding: 8px;
+      border-radius: 4px;
+      color: #fff;
+      white-space: nowrap;
+      width: fit-content;
+      cursor: pointer;
+    }
+  }
+}
+
+.footer {
+  background-color: rgb(29, 29, 29);
+  border-top: 1px solid rgb(66, 66, 66);
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 24px;
+  padding-right: 24px;
+  p {
+    font-size: 14px;
+  }
+}
+
+.ReactModal__Overlay {
+  background-color: rgba(0, 0, 0, 0.7) !important;
+  h2 {
+    margin-top: 0px;
+    color: #000 !important;
+  }
+  .ReactModal__Content {
+    min-width: 960px !important;
+    max-width: 720px;
+  }
+  .comments {
+    max-height: 500px;
+    overflow-y: auto;
+    padding-right: 12px;
+    .comment-section {
+      .comment {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 8px;
+        border-radius: 8px;
+        margin-bottom: 8px;
+
+        &:hover {
+          background-color: rgba(241, 240, 240, 0.521);
+        }
+
+        .comment-info {
+          margin-right: 24px;
+          .comment-text {
+            color: rgb(43, 43, 43);
+            font-size: 14px;
+            margin-top: 0px;
+          }
+          .comment-user {
+            display: flex;
+            align-items: center;
+            img {
+              width: 24px;
+              height: 24px;
+              border-radius: 100px;
+            }
+            .username {
+              margin-left: 8px;
+              margin-right: 12px;
+              color: rgb(43, 43, 43);
+              font-size: 13px;
+            }
+            .time {
+              color: rgb(117, 117, 117);
+              font-size: 12px;
+            }
+            .answer {
+              margin-left: 8px;
+              background-color: rgb(233, 233, 233);
+              padding: 4px 8px;
+              border: none;
+              cursor: pointer;
+              font-size: 13px;
+              border-radius: 4px;
+            }
+          }
+        }
+        .comment-upvotes {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          .up,
+          .down {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            cursor: pointer;
+            border: none;
+            min-width: 48px;
+            height: 32px;
+            span {
+              font-size: 13px;
+              color: #000;
+              margin-left: 4px;
+            }
+          }
+          .up {
+            margin-bottom: 8px;
+          }
+          .up.active {
+            background-color: rgb(22, 136, 22);
+            svg {
+              fill: #fff;
+            }
+            span {
+              color: #fff;
+            }
+          }
+          .down.active {
+            background-color: rgb(136, 22, 22);
+            svg {
+              fill: #fff;
+            }
+            span {
+              color: #fff;
+            }
+          }
+        }
+      }
+      .send-comment {
+        display: flex;
+        align-items: flex-end;
+        margin-bottom: 12px;
+        textarea {
+          border: 1px solid rgb(207, 207, 207);
+          outline: none;
+          border-radius: 4px;
+          width: 100%;
+          padding: 8px;
+          margin-right: 8px;
+          font-family: "Poppins", sans-serif;
+        }
+        button {
+          background-color: #e6e6e6;
+          border: none;
+          padding: 4px 8px;
+          cursor: pointer;
+        }
+      }
+    }
+    .two-level {
+      border-left: 8px solid rgb(231, 231, 231);
+      padding-left: 12px;
+      border-radius: 10px;
+      margin-left: 12px;
+      margin-bottom: 8px;
+    }
+  }
+
+  .comments::-webkit-scrollbar {
+    width: 8px;
+    background-color: #e7e7e7;
+  }
+
+  .comments::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #464646;
+  }
+  .add-comment {
+    margin-top: 24px;
+    display: flex;
+    align-items: flex-end;
+    textarea {
+      border: 1px solid rgb(207, 207, 207);
+      outline: none;
+      border-radius: 4px;
+      width: 100%;
+      padding: 8px;
+      margin-right: 8px;
+      font-family: "Poppins", sans-serif;
+    }
+    button {
+      background-color: #e6e6e6;
+      border: none;
+      padding: 4px 8px;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+  }
+}
